@@ -4,24 +4,8 @@
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
       <div data-id="errbit" data-view="Errbit"></div>
     </li>
-    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <div id="newrelic_Response_Time" data-id="newrelic_Response_Time" data-view="Newrelic" data-title="Response time" data-green="200" data-yellow="500" ></div>
-    </li>
-    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <div id="newrelic_Throughput" data-id="newrelic_Throughput" data-view="Newrelic" data-title="RPM" data-green="2000" data-yellow="2500" ></div>
-    </li>
-    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <div id="newrelic_Error_Rate" data-id="newrelic_Error_Rate" data-view="Newrelic" data-title="Error rate" data-green="1" data-yellow="3"></div>
-    </li>
-    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <div id="newrelic_Apdex" data-id="newrelic_Apdex" data-view="Newrelic" data-title="Apdex" data-green="0.9" data-yellow="0.8" ></div>
-    </li>
     <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
       <div data-id="resque_scheduler_queue" data-view="ResqueHeatmap"  data-title="Scheduled jobs"></div>
-    </li>
-
-    <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
-      <div data-id="convergence" data-view="Graph" data-title="Convergence" style="background-color:#ff9618"></div>
     </li>
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="2">
       <div data-id="resque_queues_stats" data-view="ResqueList" data-title="Queued jobs"></div>
@@ -34,6 +18,18 @@
     </li>
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
       <div data-id="resque_workers_count" data-view="ResqueNumber"  data-title="Resque Workers"></div>
+    </li>
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div id="newrelic_Response_Time" data-id="newrelic_Response_Time" data-view="Newrelic" data-title="Response time" data-green="200" data-yellow="500" ></div>
+    </li>
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div id="newrelic_Throughput" data-id="newrelic_Throughput" data-view="Newrelic" data-title="RPM" data-green="2000" data-yellow="2500" ></div>
+    </li>
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div id="newrelic_Error_Rate" data-id="newrelic_Error_Rate" data-view="Newrelic" data-title="Error rate" data-green="1" data-yellow="3"></div>
+    </li>
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div id="newrelic_Apdex" data-id="newrelic_Apdex" data-view="Newrelic" data-title="Apdex" data-green="0.9" data-yellow="0.8" ></div>
     </li>
   </ul>
   <center><div style="font-size: 12px">Try this: curl -d '{ "auth_token": "YOUR_AUTH_TOKEN", "text": "Hey, Look what I can do!" }' \http://<%=request.host%>:<%=request.port%>/widgets/welcome</div></center>
