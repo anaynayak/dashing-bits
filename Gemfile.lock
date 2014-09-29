@@ -1,9 +1,23 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    activemodel (4.1.6)
+      activesupport (= 4.1.6)
+      builder (~> 3.1)
+    activeresource (4.0.0)
+      activemodel (~> 4.0)
+      activesupport (~> 4.0)
+      rails-observers (~> 0.1.1)
+    activesupport (4.1.6)
+      i18n (~> 0.6, >= 0.6.9)
+      json (~> 1.7, >= 1.7.7)
+      minitest (~> 5.1)
+      thread_safe (~> 0.1)
+      tzinfo (~> 1.1)
     addressable (2.3.6)
     backports (3.6.1)
     buftok (0.2.0)
+    builder (3.2.2)
     coffee-script (2.2.0)
       coffee-script-source
       execjs
@@ -31,17 +45,22 @@ GEM
     http (0.6.2)
       http_parser.rb (~> 0.6.0)
     http_parser.rb (0.6.0)
+    i18n (0.6.11)
     json (1.8.1)
     memoizable (0.4.2)
       thread_safe (~> 0.3, >= 0.3.1)
+    minitest (5.4.2)
     multi_json (1.10.1)
     multipart-post (2.0.0)
     naught (1.0.0)
+    newrelic_api (1.2.4)
     rack (1.5.2)
     rack-protection (1.5.3)
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
+    rails-observers (0.1.2)
+      activemodel (~> 4.0)
     rufus-scheduler (2.0.24)
       tzinfo (>= 0.3.22)
     sass (3.2.19)
@@ -87,6 +106,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activeresource
   dashing
   haml
+  newrelic_api
   twitter (>= 5.9.0)

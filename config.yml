@@ -6,3 +6,6 @@
       :api_key: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
   :base_uri: "https://errbit.example.com"
   :date_format: "%d/%m %H:%M"
+:newrelic:
+  :api_key: "xxxxxxxxxxxxxxx"
+  :app_name: 'Your App Name'
