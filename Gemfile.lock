@@ -50,6 +50,7 @@ GEM
     memoizable (0.4.2)
       thread_safe (~> 0.3, >= 0.3.1)
     minitest (5.4.2)
+    mono_logger (1.1.0)
     multi_json (1.10.1)
     multipart-post (2.0.0)
     naught (1.0.0)
@@ -61,6 +62,20 @@ GEM
       rack (>= 1.0)
     rails-observers (0.1.2)
       activemodel (~> 4.0)
+    redis (3.1.0)
+    redis-namespace (1.5.1)
+      redis (~> 3.0, >= 3.0.4)
+    resque (1.25.2)
+      mono_logger (~> 1.0)
+      multi_json (~> 1.0)
+      redis-namespace (~> 1.3)
+      sinatra (>= 0.9.2)
+      vegas (~> 0.1.2)
+    resque-scheduler (3.0.0)
+      mono_logger (~> 1.0)
+      redis (~> 3.0)
+      resque (~> 1.25)
+      rufus-scheduler (~> 2.0)
     rufus-scheduler (2.0.24)
       tzinfo (>= 0.3.22)
     sass (3.2.19)
@@ -101,6 +116,8 @@ GEM
       simple_oauth (~> 0.2.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    vegas (0.1.11)
+      rack (>= 1.0.0)
 
 PLATFORMS
   ruby
@@ -110,4 +127,7 @@ DEPENDENCIES
   dashing
   haml
   newrelic_api
+  redis
+  resque
+  resque-scheduler
   twitter (>= 5.9.0)
