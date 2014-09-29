@@ -1,0 +1,70 @@
+$background-color: #444
+$font-color: #fff
+$shadow-color: #000
+$success: #86d751
+$failure: #e3394f
+
+.widget-errbit
+
+  h1
+    background-image: url("errbit.png")
+    background-repeat: no-repeat
+    background-position: top center
+    margin: 20px 0 10px
+    height: 30px
+
+  li
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+
+    h2
+      display: inline-block
+      overflow: hidden
+      white-space: nowrap
+      text-overflow: ellipsis
+      font-size: 12px
+      font-weight: normal
+      letter-spacing: 1px
+      width: 275px
+      height: 20px
+
+    h3
+      margin-top: 30px
+      font-size: 80px
+      text-transform: uppercase
+
+    h4
+      font-size: 15px
+      text-transform: uppercase
+      margin-bottom: 20px
+
+    span
+      position: absolute
+      right: 0
+      left: 0
+      bottom: 100px
+      color: #fff
+      font-size: 8px
+      letter-spacing: 2px
+      text-transform: uppercase
+
+    p
+      &.updated-at
+        text-transform: uppercase
+        letter-spacing: 1px
+        font-size: 10px
+
+  .red
+    background-color: $failure
+
+    h2, p.updated-at
+      color: lighten($failure, 20%)
+
+  .green
+    background-color: $success
+
+    h2, p.updated-at
+      color: lighten($success, 20%)
