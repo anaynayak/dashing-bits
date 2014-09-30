@@ -1,0 +1,20 @@
+<% content_for :title do %>My super sweet dashboard<% end %>
+<div class="gridster">
+  <ul>
+    <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
+      <div data-id="resque_scheduler_queue" data-view="ResqueHeatmap"  data-title="Scheduled jobs"></div>
+    </li>
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="2">
+      <div data-id="resque_queues_stats" data-view="ResqueList" data-title="Queued jobs"></div>
+    </li>
+    <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
+      <div data-id="resque_processed_jobs" data-view="ResqueGraph"  data-title="Processed Jobs"></div>
+    </li>
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="resque_failed_jobs" data-view="ResqueGraph"  data-title="Failed Jobs"></div>
+    </li>
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="resque_workers_count" data-view="ResqueNumber"  data-title="Resque Workers"></div>
+    </li>
+  </ul>
+</div>
