@@ -1,0 +1,11 @@
+<h1 class="title" data-bind="title"></h1>
+
+<img class="background" src="/assets/logo-circle-ci.png">
+
+<ul class="items list-nostyle">
+  <li class="item" data-foreach-item="items" data-bind-class="item.widget_class">
+    <span class="label repo" data-bind="item.name"></span>
+    <span class="label branch" data-bind="item.label"></span>
+    <div class="clearfix"/>
+  </li>
+</ul>

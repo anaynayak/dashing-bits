@@ -9,3 +9,5 @@
 :newrelic:
   :api_key: "xxxxxxxxxxxxxxx"
   :app_name: 'Your App Name'
+:gocd:
+  :url: 'http://go:8153/go/cctray.xml'
