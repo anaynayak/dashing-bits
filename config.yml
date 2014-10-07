@@ -11,3 +11,9 @@
   :app_name: 'Your App Name'
 :gocd:
   :url: 'http://go:8153/go/cctray.xml'
+:ga:
+  :service_account_email: ''
+  :key_file: ''
+  :key_secret: ''
+  :profile_id: ''
+

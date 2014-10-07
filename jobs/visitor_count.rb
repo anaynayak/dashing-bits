@@ -2,10 +2,11 @@ require 'google/api_client'
 require 'date'
 
 # Update these to match your own apps credentials
-service_account_email = '[YOUR SERVICE ACCOUNT EMAIL]' # Email of service account
-key_file = 'path/to/your/keyfile.p12' # File containing your private key
-key_secret = 'notasecret' # Password to unlock private key
-profileID = '[YOUR PROFILE ID]' # Analytics profile ID.
+config = YAML.load(File.open("config.yml"))
+service_account_email = config[:ga][:service_account_email]
+key_file = config[:ga][:key_file]
+key_secret = config[:ga][:key_secret]
+profileID = config[:ga][:profile_id]
 
 # Get the Google API client
 client = Google::APIClient.new(:application_name => '[YOUR APPLICATION NAME]', 
