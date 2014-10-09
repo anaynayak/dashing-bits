@@ -1,29 +1,34 @@
 require 'google/api_client'
 require 'date'
 
-# Update these to match your own apps credentials
-config = YAML.load(File.open("config.yml"))
-service_account_email = config[:ga][:service_account_email]
-key_file = config[:ga][:key_file]
-key_secret = config[:ga][:key_secret]
-profileID = config[:ga][:profile_id]
+def setup
+  # Update these to match your own apps credentials
+  config = YAML.load(File.open("config.yml"))
+  service_account_email = config[:ga][:service_account_email]
+  key_file = config[:ga][:key_file]
+  key_secret = config[:ga][:key_secret]
+  profileID = config[:ga][:profile_id]
 
-# Get the Google API client
-client = Google::APIClient.new(:application_name => '[YOUR APPLICATION NAME]', 
-  :application_version => '0.01')
+  # Get the Google API client
+  client = Google::APIClient.new(:application_name => '[YOUR APPLICATION NAME]', 
+    :application_version => '0.01')
 
-# Load your credentials for the service account
-key = Google::APIClient::KeyUtils.load_from_pkcs12(key_file, key_secret)
-client.authorization = Signet::OAuth2::Client.new(
-  :token_credential_uri => 'https://accounts.google.com/o/oauth2/token',
-  :audience => 'https://accounts.google.com/o/oauth2/token',
-  :scope => 'https://www.googleapis.com/auth/analytics.readonly',
-  :issuer => service_account_email,
-  :signing_key => key)
+  # Load your credentials for the service account
+  key = Google::APIClient::KeyUtils.load_from_pkcs12(key_file, key_secret)
+  client.authorization = Signet::OAuth2::Client.new(
+    :token_credential_uri => 'https://accounts.google.com/o/oauth2/token',
+    :audience => 'https://accounts.google.com/o/oauth2/token',
+    :scope => 'https://www.googleapis.com/auth/analytics.readonly',
+    :issuer => service_account_email,
+    :signing_key => key)
+   client
+end
 
 # Start the scheduler
 SCHEDULER.every '1m', :first_in => 0 do
 
+  @client ||= setup
+  client = @client
   # Request a token for our service account
   client.authorization.fetch_access_token!
 
